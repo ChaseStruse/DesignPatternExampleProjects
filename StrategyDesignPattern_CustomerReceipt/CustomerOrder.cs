@@ -7,12 +7,16 @@ namespace StrategyDesignPattern_CustomerReceipt
 {
     public class CustomerOrder
     {
-        private ICustomerReceiptStrategy CustomerReceiptStrategy { get; set; } = new CustomerReceiptStrategy();
-        public string ReceiptType { get; set; }
+        private IReceiptStrategy _receiptStrategy;
 
-        public void FinalizeOrder(CustomerOrder order)
+        public CustomerOrder(IReceiptStrategy receiptStrategy)
         {
-            Console.WriteLine(CustomerReceiptStrategy.GetReceiptStrategy(order.ReceiptType));
+            _receiptStrategy = receiptStrategy;
+        }
+        public void FinalizeOrder()
+        {
+            Console.WriteLine("Finalizing order");
+            _receiptStrategy.Receipt();
         }
     }
 }
