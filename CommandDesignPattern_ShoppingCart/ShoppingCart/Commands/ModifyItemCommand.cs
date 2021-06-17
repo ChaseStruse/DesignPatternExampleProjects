@@ -2,11 +2,7 @@
 
 namespace ShoppingCart.Commands
 {
-    public interface IOrderCommand
-    {
-        void Execute();
-    }
-    public class OrderCommand : IOrderCommand
+    public class ModifyItemCommand : IOrderCommand
     {
         public void Execute()
         {
