@@ -1,12 +1,22 @@
-﻿using System;
+﻿using ShoppingCart.Models;
+using System;
 
 namespace ShoppingCart.Commands
 {
     public class InsertItemCommand : IOrderCommand
     {
-        public void Execute()
+        private Order _order;
+        private Item _item;
+
+        public InsertItemCommand(Order order, Item item)
         {
-            throw new NotImplementedException();
+            _order = order;
+            _item = item;
+        }
+        public Order Execute()
+        {
+            _order.OrderItems.Add(_item);
+            return _order;
         }
     }
 }
