@@ -16,12 +16,11 @@ namespace ShoppingCart.Commands
             _newItem = newItem;
         }
 
-        public Order Execute()
+        public void Execute()
         {
             // Might be able to refactor...
             var index = _order.OrderItems.FindIndex(x => x.Equals(_itemToModify));
             _order.OrderItems[index] = _newItem;
-            return _order;
         }
     }
 }

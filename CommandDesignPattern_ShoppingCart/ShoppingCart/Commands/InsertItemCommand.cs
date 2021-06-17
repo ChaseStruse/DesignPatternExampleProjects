@@ -13,10 +13,9 @@ namespace ShoppingCart.Commands
             _order = order;
             _item = item;
         }
-        public Order Execute()
+        public void Execute()
         {
             _order.OrderItems.Add(_item);
-            return _order;
         }
     }
 }

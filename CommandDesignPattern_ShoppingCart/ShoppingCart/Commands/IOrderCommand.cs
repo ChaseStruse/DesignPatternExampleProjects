@@ -5,6 +5,6 @@ namespace ShoppingCart.Commands
 {
     public interface IOrderCommand
     {
-        Order Execute();
+        void Execute();
     }
 }
