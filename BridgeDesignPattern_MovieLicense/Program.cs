@@ -10,6 +10,7 @@ namespace BridgeDesignPattern_MovieLicense
         static void Main(string[] args)
         {
             Movie movie = new Movie() { Name = "Avatar",  Genre = "Action"};
+
             SeniorDiscount seniorDiscount = new SeniorDiscount();
             LifetimeLicense lifetimeLicense = new LifetimeLicense(movie, seniorDiscount.GetDiscount(), DateTime.Now);
 
@@ -22,6 +23,18 @@ namespace BridgeDesignPattern_MovieLicense
 
             Console.WriteLine("Lifetime License Price Prior to Military Discount: " + lifetimeLicenseMilitaryDiscount.GetCorePrice());
             Console.WriteLine("Lifetime License Price After Military Discount: " + lifetimeLicenseMilitaryDiscount.GetPrice());
+            Console.WriteLine("");
+
+            TwoDayLicense twoDayLicense = new TwoDayLicense(movie, seniorDiscount.GetDiscount(), DateTime.Now);
+
+            Console.WriteLine("Two Day License Price Prior to Senior Discount: " + twoDayLicense.GetCorePrice());
+            Console.WriteLine("Two Day License Price After Senior Discount: " + twoDayLicense.GetPrice());
+            Console.WriteLine("");
+
+            TwoDayLicense twoDayLicenseMilitaryDiscount = new TwoDayLicense(movie, militaryDiscount.GetDiscount(), DateTime.Now);
+
+            Console.WriteLine("Two Day License Price Prior to Military Discount: " + twoDayLicenseMilitaryDiscount.GetCorePrice());
+            Console.WriteLine("Two Day License Price After Military Discount: " + twoDayLicenseMilitaryDiscount.GetPrice());
             Console.WriteLine("");
         }
     }
