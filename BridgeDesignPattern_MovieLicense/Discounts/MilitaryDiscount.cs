@@ -4,7 +4,11 @@ using System.Text;
 
 namespace BridgeDesignPattern_MovieLicense.Discounts
 {
-    class Military
+    public class MilitaryDiscount : IDiscount
     {
+        public double GetDiscount()
+        {
+            return .1;
+        }
     }
 }
