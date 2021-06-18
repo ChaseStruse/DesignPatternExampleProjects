@@ -20,7 +20,7 @@ namespace BridgeDesignPattern_MovieLicense.MovieLicenses
 
         public double GetCorePrice()
         {
-            return 4.0;
+            return 10.0;
         }
 
         public int? GetExpriation()
