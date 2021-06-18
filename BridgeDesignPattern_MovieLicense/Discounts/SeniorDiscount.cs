@@ -4,7 +4,11 @@ using System.Text;
 
 namespace BridgeDesignPattern_MovieLicense.Discounts
 {
-    class SeniorDiscount
+    public class SeniorDiscount : IDiscount
     {
+        public double GetDiscount()
+        {
+            return .2;
+        }
     }
 }
