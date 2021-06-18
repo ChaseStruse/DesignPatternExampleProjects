@@ -11,7 +11,7 @@ namespace BridgeDesignPattern_MovieLicense.MovieLicenses
             throw new NotImplementedException();
         }
 
-        public int GetExpriation()
+        public int? GetExpriation()
         {
             throw new NotImplementedException();
         }

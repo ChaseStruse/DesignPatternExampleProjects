@@ -8,7 +8,7 @@ namespace BridgeDesignPattern_MovieLicense.MovieLicenses
     {
         double GetCorePrice();
         double GetPrice();
-        int GetExpriation();
+        int? GetExpriation();
 
     }
 }
